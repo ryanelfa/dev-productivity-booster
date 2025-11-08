@@ -1,7 +1,4 @@
-# Crée le fichier avec un contenu multi-lignes (UTF-8 par défaut dans VS Code)
-Set-Content -Path "data/productivity.csv" -Value @"
 developer,commits,tests_passed,bugs_fixed,lines_added
 Alice,34,25,5,1020
 Bob,18,15,2,730
 Ryan,27,21,3,950
-"@
