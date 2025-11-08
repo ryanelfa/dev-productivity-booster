@@ -4,6 +4,8 @@ from pathlib import Path
 
 DATA_PATH = Path("data") / "Productivity.csv"
 
+
+# write a pytest to check that calculate_score returns a positive float
 def calculate_score(row: pd.Series) -> float:
     """
     Weighted score:
@@ -29,11 +31,6 @@ def load_dataset(path: Path) -> pd.DataFrame:
     return df
     
 def add_scores (df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    df["score"] = df.apply(calculate_score, axis=1)
-    return df
-
-def add_scores(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["score"] = df.apply(calculate_score, axis=1)
     return df
